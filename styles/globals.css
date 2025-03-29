@@ -10,6 +10,7 @@
 
 body {
   margin: 0;
+  margin-left: 16px;
 }
 
 h1,
@@ -37,9 +38,25 @@ input {
   font-size: inherit;
 }
 
+button {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+img {
+  object-fit: cover;
+}
+
 ul,
 ol {
   list-style: none;
+}
+
+dialog {
+  padding: 0;
 }
 
 .visually-hidden {

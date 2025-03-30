@@ -561,9 +561,9 @@
       </article>
       <button
         class="button button-save"
+        onclick="window['dialog'].showModal()"
+        aria-controls="dialog"
         type="button"
-        onclick="window['dialog-id'].showModal()"
-        aria-controls="dialog-id"
       >
         <svg class="discket" viewBox="0 0 39 39">
           <use href="./svg/floppy.svg#discket"></use>
@@ -571,23 +571,16 @@
         <span class="button__text">Сохранить на память</span>
       </button>
     </main>
-    <dialog id="dialog-id">
-      <div class="dialog">
+    <dialog class="dialog" id="dialog">
+      <form class="dialog-form" method="dialog">
         <svg class="discket dialog-image" viewBox="0 0 39 39">
           <use href="./svg/floppy.svg#discket"></use>
         </svg>
-        <h3 class="dialog-text">
-          Вставьте <br />
-          дискету, чтобы <br />продолжить
-        </h3>
-      </div>
-      <button
-        type="button"
-        onclick="window['dialog-id'].close()"
-        class="button dialog-button"
-      >
-        <span class="button__text">ок</span>
-      </button>
+        <p class="dialog-text">Вставьте дискету, чтобы продолжить</p>
+        <button class="button dialog-button" type="submit">
+          <span class="button__text">ок</span>
+        </button>
+      </form>
     </dialog>
     <script src="./scripts/like.js"></script>
   </body>

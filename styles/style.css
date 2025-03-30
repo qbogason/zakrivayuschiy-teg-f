@@ -78,6 +78,8 @@
 .card__image {
   position: relative;
   inline-size: 100%;
+  border-block-end: 2px solid var(--border-color);
+  border-block-start: 2px solid var(--border-color);
 }
 
 .card__picture {
@@ -170,7 +172,7 @@
   justify-content: center;
   align-items: center;
   gap: 8px;
-  margin: 50px auto;
+  margin: 0 auto 100px;
   padding: 15px 20px;
 }
 
@@ -293,18 +295,21 @@ dialog::backdrop {
 
 .contour {
   transition-duration: 0.1s;
+  transition-timing-function: linear;
 }
 
 .core {
   fill: transparent;
   transition-delay: 0.03s;
   transition-duration: 0.3s;
+  transition-timing-function: linear;
 }
 
 .main-body {
   fill: transparent;
   transition-delay: 0s;
   transition-duration: 0.3s;
+  transition-timing-function: linear;
 }
 
 .sparks {
@@ -316,42 +321,49 @@ dialog::backdrop {
   fill: var(--like-icon-contour);
   transition-delay: 0s;
   transition-duration: 0.3s;
+  transition-timing-function: linear;
 }
 
 .like-icon:hover .main-body {
   fill: var(--like-icon-contour);
   transition-delay: 0.05s;
   transition-duration: 0.3s;
+  transition-timing-function: linear;
 }
 
 .like-icon:active .core {
   fill: var(--like-icon-fill);
   transition-delay: 0s;
   transition-duration: 0.3s;
+  transition-timing-function: linear;
 }
 
 .like-icon:active .main-body {
   fill: var(--like-icon-fill);
   transition-delay: 0.05s;
   transition-duration: 0.3s;
+  transition-timing-function: linear;
 }
 
 .like-icon.is-liked .contour {
   fill: var(--like-icon-fill);
   transition-delay: 0.06s;
   transition-duration: 0.3s;
+  transition-timing-function: linear;
 }
 
 .like-icon.is-liked .core {
   fill: var(--like-icon-fill);
   transition-delay: 0s;
   transition-duration: 0.3s;
+  transition-timing-function: linear;
 }
 
 .like-icon.is-liked .main-body {
   fill: var(--like-icon-fill);
   transition-delay: 0.05s;
   transition-duration: 0.3s;
+  transition-timing-function: linear;
 }
 
 .like-icon.is-liked .heart {
@@ -384,12 +396,13 @@ dialog::backdrop {
     gap: 10px;
   }
 
-  .floppy {
-    width: 28px;
-    height: 28px;
+  .label {
+    right: 13px;
   }
-
   .discket {
     block-size: 28px;
+  }
+  .dialog-image {
+    block-size: 39px;
   }
 }
